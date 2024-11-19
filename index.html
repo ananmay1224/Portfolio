@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ananmay 'Azazel' Narain - Artist Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        /* Custom Styles */
+        .card {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.5s;
+        }
+
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        #content {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        #content.fade-in {
+            opacity: 1;
+        }
+
+        /* Gradient Background */
+        .gradient-bg {
+            background: linear-gradient(to bottom, #000000, #1a1a2e, #000000);
+        }
+
+        /* Custom hover effects */
+        .hover-glow:hover {
+            box-shadow: 0 0 15px rgba(74, 222, 128, 0.2);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen">
+    <!-- Loading Screen -->
+    <div id="loading" class="loading-screen">
+        <div class="text-green-400 text-xl">Loading your artistic journey...</div>
+    </div>
+    <div id="content">
+        <!-- Hero Banner -->
+        <div class="relative w-full" style="height: calc(100vw * 9/16); max-height: 600px;">
+            <div class="absolute inset-0 bg-cover bg-center" 
+                 style="background-image: url('https://drive.google.com/thumbnail?id=13GmTYzJBcJoTLWM5a8-NWmmfLyM_4uS5&sz=w2000');">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+            <div class="absolute bottom-0 left-0 p-8 text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-2">Ananmay 'Azazel' Narain</h1>
+                <div class="flex flex-wrap items-center gap-4 text-base md:text-lg">
+                    <span class="flex items-center">
+                        <i data-lucide="mic" class="w-4 h-4 md:w-5 md:h-5 mr-2"></i>
+                        Beatboxer
+                    </span>
+                    <span class="flex items-center">
+                        <i data-lucide="music" class="w-4 h-4 md:w-5 md:h-5 mr-2"></i>
+                        Vocal Artist
+                    </span>
+                    <span class="flex items-center text-green-400">
+                        <i data-lucide="play-circle" class="w-4 h-4 md:w-5 md:h-5 mr-2"></i>
+                        Spotify Creator
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="max-w-7xl mx-auto p-4 md:p-8">
+            <!-- Introduction -->
+            <div class="card p-6 text-white mb-12 hover-glow">
+                <p class="text-base md:text-lg leading-relaxed">
+                    As cliche as it may sound, I am a data analyst by day, and an artist by night. 
+                    I wish to bridge the gap between my two worlds at Spotify by innovating new ideas 
+                    and collaborating with likeminded individuals, bringing together both the perspectives 
+                    of a creator and a consumer. Here is a glimpse of my artistic side and journey.
+                </p>
+            </div>
+
+            <!-- Achievement Grid -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- World Championship -->
+                <div class="card p-6 text-white hover-glow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://drive.google.com/thumbnail?id=1-lkuAyk94Uvq6t-SsTOBXz1dY--SXwFM&sz=w200"
+                             alt="Championship Logo" 
+                             class="w-16 h-16 object-contain mr-4">
+                        <h3 class="text-lg md:text-xl font-bold flex items-center">
+                            <i data-lucide="globe" class="w-5 h-5 md:w-6 md:h-6 mr-2 text-green-400"></i>
+                            World Beatbox Championship
+                        </h3>
+                    </div>
+                    <p class="mb-4">
+                        Took a terrifying yet life changing solo trip to Berlin at the age of 18 to become 
+                        the first Indian to compete against his idols at the triennial World Beatbox Championship.
+                    </p>
+                    <a href="https://youtu.be/4knDR6iL61w?si=v0BnmtTnvxkLTtAb"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center text-green-400 hover:text-green-300">
+                        Watch Performance 
+                        <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+                <!-- Indian Champion -->
+                <div class="card p-6 text-white hover-glow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://drive.google.com/thumbnail?id=1r-g-k-7G1YGBFNOo8Fz-_rkrLICBc0_L&sz=w200"
+                             alt="Indian Champion Logo" 
+                             class="w-16 h-16 object-contain mr-4">
+                        <h3 class="text-lg md:text-xl font-bold flex items-center">
+                            <i data-lucide="award" class="w-5 h-5 md:w-6 md:h-6 mr-2 text-green-400"></i>
+                            Indian Beatbox Champion
+                        </h3>
+                    </div>
+                    <p class="mb-4">
+                        Became the youngest national beatboxing champion of India at the age of 17.
+                    </p>
+                    <a href="https://youtu.be/eHfF0q_-e3U?si=TLW6nIlXo0k5Iupi"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center text-green-400 hover:text-green-300">
+                        Watch Performance 
+                        <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+		<!-- Spotify Artist -->
+                <div class="card p-6 text-white hover-glow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://drive.google.com/thumbnail?id=1N7zYk1QbhNrHwsasSc6oPqBUZi3CrMlb&sz=w200"
+                             alt="Spotify Logo" 
+                             class="w-16 h-16 object-contain mr-4">
+                        <h3 class="text-lg md:text-xl font-bold flex items-center">
+                            <i data-lucide="music" class="w-5 h-5 md:w-6 md:h-6 mr-2 text-green-400"></i>
+                            Verified Spotify Artist
+                        </h3>
+                    </div>
+                    <p class="mb-4">
+                        Took a deep breath and tried something new by uploading my first song, 'Parwa' on Spotify, 
+                        rapping in my native language - Hindi. The literal translation of 'Parwa' is 'Care'. 
+                        This song is really close to my heart and it took my friends shoving me in the recording 
+                        studio to get this done. I am glad they did.
+                    </p>
+                    <a href="https://open.spotify.com/track/79Aha8wPzByfM7t2Di9OC5?si=dc82032e33d54ad4"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center text-green-400 hover:text-green-300">
+                        Listen on Spotify 
+                        <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+                <!-- No Comment A Cappella -->
+                <div class="card p-6 text-white hover-glow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://drive.google.com/thumbnail?id=1bFahi9TcZlIQoB2Y_S4BRZke18YSy9fC&sz=w200"
+                             alt="No Comment Logo" 
+                             class="w-16 h-16 object-contain mr-4">
+                        <h3 class="text-lg md:text-xl font-bold flex items-center">
+                            <i data-lucide="mic" class="w-5 h-5 md:w-6 md:h-6 mr-2 text-green-400"></i>
+                            No Comment A Cappella
+                        </h3>
+                    </div>
+                    <p class="mb-4">
+                        Being a beatboxer, it was only natural for me to want to see what A Cappella was about 
+                        at university. Let's just say that it was a humbling and an extremely fun experience 
+                        to make music and compete against other groups. Check out our song with me on vocal 
+                        percussion. Please note that it isn't a lot like Pitch Perfect, it's quite impossible 
+                        for 15 people to freestyle and sound good at the same time.
+                    </p>
+                    <a href="https://open.spotify.com/track/7GgGm8Iyr3NQm5fCUIX4PH?si=9e04f0df535c4045"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center text-green-400 hover:text-green-300">
+                        Listen on Spotify 
+                        <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+                <!-- MTV Interview -->
+                <div class="card p-6 text-white hover-glow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://drive.google.com/thumbnail?id=150aopO9gczc61QPU-MKqQSwSWZdZXCC4&sz=w200"
+                             alt="MTV Logo" 
+                             class="w-16 h-16 object-contain mr-4">
+                        <h3 class="text-lg md:text-xl font-bold flex items-center">
+                            <i data-lucide="mic" class="w-5 h-5 md:w-6 md:h-6 mr-2 text-green-400"></i>
+                            Interview and Beatboxing Showcase on MTV
+                        </h3>
+                    </div>
+                    <p class="mb-4">
+                        I freaked out when MTV reached out to me to represent the Indian beatboxing community 
+                        and do a 50-minute interview. I freaked out even more when the interview and showcase 
+                        hit more than 33,000 views on Facebook. Brilliant times!
+                    </p>
+                    <a href="https://www.facebook.com/share/v/1AmQdkAara/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center text-green-400 hover:text-green-300">
+                        Watch Interview 
+                        <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Performance Gallery -->
+            <div class="mt-16">
+                <h2 class="text-2xl font-bold text-white mb-6">Performance Highlights</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="h-64 bg-center bg-cover rounded-lg transform hover:scale-105 transition-all"
+                         style="background-image: url('https://drive.google.com/thumbnail?id=1CPOcu2L2JZnFtTthdpmZW94OmoobM_C5&sz=w800');">
+                    </div>
+                    <div class="h-64 bg-center bg-cover rounded-lg transform hover:scale-105 transition-all"
+                         style="background-image: url('https://drive.google.com/thumbnail?id=1eKjaQEFsNq-YZ4GiTNa0GGw9TyGXJ6-n&sz=w800');">
+                    </div>
+                    <div class="h-64 bg-center bg-cover rounded-lg transform hover:scale-105 transition-all"
+                         style="background-image: url('https://drive.google.com/thumbnail?id=14WU_G2ax-AI3M2SlcfWvok2xYI0PT8Uw&sz=w800');">
+                    </div>
+                </div>
+            </div>
+            <!-- Notable Performances List -->
+            <div class="mt-16">
+                <div class="card p-6 text-white hover-glow">
+                    <h2 class="text-xl md:text-2xl font-bold mb-6">Notable Performances and Accolades</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="play-circle" class="w-5 h-5 mr-3 mt-1 text-green-400 flex-shrink-0"></i>
+                            <span>Opened for Trippie Redd and Borgore in Illinois, USA, and performed in front of a nerve-wracking and exciting crowd of 5000+ music lovers.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="play-circle" class="w-5 h-5 mr-3 mt-1 text-green-400 flex-shrink-0"></i>
+                            <span>Performed at the Summer Camp Music Festival in Illinois, USA with a footfall of over 20,000 fans and artists alike.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="play-circle" class="w-5 h-5 mr-3 mt-1 text-green-400 flex-shrink-0"></i>
+                            <span>
+                                Placed among the top 8 beatboxers at the Open Asia Beatbox Battle held in Malaysia
+                                <a href="https://youtu.be/tY0Ip_DZjyw?si=v3nWesGU7BJ8xwpI"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="inline-flex items-center ml-2 text-green-400 hover:text-green-300">
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="play-circle" class="w-5 h-5 mr-3 mt-1 text-green-400 flex-shrink-0"></i>
+                            <span>
+                                Accumulated over 15,000 beatboxing lovers and followers on TikTok and got featured in FYGU Fest's TikTok profile hitting over 3.2 million views!
+                                <a href="https://www.tiktok.com/@ananmay.narain?lang=en"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="inline-flex items-center ml-2 text-green-400 hover:text-green-300">
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Wait for DOM content to load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lucide icons first
+            lucide.createIcons();
+
+            // Function to convert Google Drive URL to direct link
+            function getDirectGDriveLink(url) {
+                const fileId = url.match(/id=(.*?)(?:&|$)/)[1];
+                return `https://drive.google.com/uc?export=view&id=${fileId}`;
+            }
+
+            // Force load content after timeout (failsafe)
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').classList.add('fade-in');
+                document.getElementById('content').style.opacity = '1';
+            }, 3000); // 3 seconds timeout
+
+            // Show content immediately
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('content').classList.add('fade-in');
+            document.getElementById('content').style.opacity = '1';
+        });
+    </script>
+</body>
+</html>
